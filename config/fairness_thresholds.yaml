@@ -1,0 +1,27 @@
+regulatory_thresholds:
+  four_fifths_rule:
+    threshold: 0.8
+    regulation: "ECOA"
+    severity:
+      pass: "Low"
+      marginal: "Medium"  # 0.7-0.8
+      fail: "High"  # <0.7
+  
+  demographic_parity:
+    threshold: 0.1
+    regulation: "Fair Housing Act"
+    
+  equal_opportunity:
+    threshold: 0.1
+    regulation: "ECOA"
+
+severity_scoring:
+  weights:
+    four_fifths: 0.4
+    demographic_parity: 0.3
+    equal_opportunity: 0.3
+  
+  levels:
+    low: [0, 0.33]
+    medium: [0.33, 0.66]
+    high: [0.66, 1.0]

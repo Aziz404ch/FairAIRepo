@@ -1,0 +1,37 @@
+# Core Dependencies
+streamlit==1.49.1
+pandas==2.3.2
+numpy==1.26.4
+scipy==1.11.4
+
+# Machine Learning
+scikit-learn==1.3.2
+xgboost==2.0.3
+lightgbm==4.1.0
+
+# Fairness Libraries
+fairlearn==0.10.0
+aif360==0.6.1  # see note below about Python 3.12
+
+# Explainability
+shap==0.43.0
+lime==0.2.0.1
+
+# Visualization
+plotly==5.18.0
+matplotlib==3.8.2
+seaborn==0.13.0
+folium==0.15.1
+
+# Utilities
+pydantic==2.5.3
+python-dotenv==1.0.0
+faker==20.1.0
+pytest==7.4.3
+black==23.12.1
+flake8==6.1.0
+mypy==1.7.1
+
+# Deployment
+gunicorn==21.2.0
+docker==7.0.0

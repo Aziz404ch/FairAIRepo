@@ -1,0 +1,39 @@
+app:
+  name: "FAIR-AI Lending Monitor"
+  version: "1.0.0"
+  debug: false
+
+data:
+  synthetic:
+    n_samples: 50000
+    bias_patterns:
+      geographic_redlining: true
+      age_bias: true
+      gender_bias: true
+    random_seed: 42
+
+models:
+  logistic_regression:
+    max_iter: 1000
+    random_state: 42
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    random_state: 42
+
+fairness:
+  protected_attributes:
+    - race
+    - gender
+    - age_group
+  reference_groups:
+    race: "White"
+    gender: "Male"
+    age_group: "35-54"
+  
+visualization:
+  theme: "plotly_white"
+  color_scheme:
+    positive: "#2E7D32"
+    warning: "#F57C00"
+    negative: "#C62828"
